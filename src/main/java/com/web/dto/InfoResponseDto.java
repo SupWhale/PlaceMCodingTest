@@ -5,15 +5,15 @@ import lombok.Getter;
 
 @Getter
 public class InfoResponseDto {
+    private Long orderno;
     private String name;
     private String mobile;
     private String city;
-    private int age;
 
     public InfoResponseDto(Info entity){
+        this.orderno = entity.getOrderno();
         this.name = entity.getName();
         this.mobile = entity.getMobile();
         this.city = entity.getCity();
-        this.age = entity.getAge();
     }
 }

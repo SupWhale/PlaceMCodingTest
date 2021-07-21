@@ -16,6 +16,7 @@ public class InfoService {
 
     @Transactional
     public Long save(InfoSaveRequestDto requestDto){
+
         return infoRepository.save(requestDto.toEntity()).getOrderno();
     }
 
@@ -24,6 +25,5 @@ public class InfoService {
                 () -> new IllegalArgumentException("null"));
 
                 return new InfoResponseDto(entity);
-
     }
 }

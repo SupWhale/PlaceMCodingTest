@@ -10,12 +10,12 @@ import com.web.dto.InfoResponseDto;
 @RestController
 public class InfoApiController {
 
-    private final InfoService postsService;
+    private final InfoService infoService;
 
 
     @GetMapping("/orderno/{orderno}")
-    public InfoResponseDto findById (@PathVariable Long orderno){
-        return InfoService.findById(orderno);
+    public InfoResponseDto findByOrderno (@PathVariable Long orderno){
+        return infoService.findById(orderno);
     }
 
 }
